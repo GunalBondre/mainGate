@@ -1,0 +1,24 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "email app",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GunalBondre/mainGate.git"
+  },
+  "author": "gunal bondre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GunalBondre/mainGate/issues"
+  },
+  "homepage": "https://github.com/GunalBondre/mainGate#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
