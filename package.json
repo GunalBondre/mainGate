@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend/server.js",
+  "scripts": {
+    "server": "node start --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+  },
+  "engines": {
+    "node": "14.16.1",
+    "npm": "6.14.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GunalBondre/mainGate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GunalBondre/mainGate/issues"
+  },
+  "homepage": "https://github.com/GunalBondre/mainGate#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
