@@ -1,11 +1,25 @@
 const express = require("express");
 const app = express();
+require("./services/passport");
+require("./models/db");
+const keys = require("./config/keys");
 
-const port = process.env.PORT || 3000;
+var users = require("./routes/authRoutes");
+const cookieSession = require("cookie-session");
+const passport = require("passport");
+const { initialize } = require("passport");
+const port = process.env.PORT || 5000;
 app.use(express.json());
-app.get("/", (req, res) => {
-	res.status(200).json({
-		message: "welcome",
-	});
-});
+app.use(
+	cookieSession({
+		name: "session",
+		keys: [keys.cookieKey],
+		maxAge: 30 * 24 * 60 * 60 * 1000,
+	})
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+app.use("/users", users);
+
 app.listen(port);
