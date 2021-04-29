@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema(
 	{
-		userName: "String",
-		googleId: "String",
-		googleProfileName: "String",
+		userName: { type: "String" },
+		googleId: { type: "String" },
+		googleProfileName: { type: "String" },
+		email: { type: "String" },
 	},
 	{ timestam: true }
 );

@@ -2,13 +2,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "backend/server.js",
-  "Proxy": "http://localhost:5000",
+  "proxy": "http://localhost:5000",
   "scripts": {
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "eject": "npm eject --prefix client"
-
   },
   "engines": {
     "node": "14.16.1",
@@ -26,8 +25,10 @@
   },
   "homepage": "https://github.com/GunalBondre/mainGate#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.5.1",
     "bootstrap": "^4.6.0",
     "cookie-session": "^1.4.0",
+    "http-proxy-middleware": "^1.3.1",
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
@@ -37,5 +38,8 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.1.0",
     "sass-loader": "^11.0.1"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1"
   }
 }
